@@ -16,3 +16,5 @@ $Downloader.Download()
 $Installer = New-Object -ComObject Microsoft.Update.Installer
 $Installer.Updates = $SearchResult
 $SearchResult = $Installer.Install()
+
+Write-Output "Update Complete"
