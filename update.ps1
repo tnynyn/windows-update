@@ -1,3 +1,9 @@
+#Sets "Active Hours" so servers dont reboot automatically
+$ahStart = 17 #5PM
+$ahEnd = 23   #11PM
+Set-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings -Name ActiveHoursStart -Value $ahStart -PassThru
+Set-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings -Name ActiveHoursEnd -Value $ahEnd -PassThru 
+
 #Define update criteria
 $Criteria = "IsInstalled=0"
 
